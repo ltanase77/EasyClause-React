@@ -4,6 +4,7 @@
   "description": "Clause generator app build with react",
   "main": "app.js",
   "scripts": {
+    "build": "babel src -d lib",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -11,5 +12,12 @@
     "easyclause"
   ],
   "author": "Lucian Tanase",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "semantic-ui": "^2.4.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2"
+  }
 }
