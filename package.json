@@ -1,0 +1,15 @@
+{
+  "name": "easyclause-react",
+  "version": "1.0.0",
+  "description": "Clause generator app build with react",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "easyclause"
+  ],
+  "author": "Lucian Tanase",
+  "license": "ISC"
+}
