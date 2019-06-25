@@ -1,0 +1,40 @@
+
+.lang-options {
+    display: flex;
+    padding: 2%;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.btn-lang {
+    flex: 1;
+    margin-right: 1px;
+    padding: 4px 0;
+    border-radius: 5px 10px;
+    border: 1px solid rebeccapurple;
+    font-family: "Artifika", serif;
+    background-color: #faf1fc;
+    color: #00188f;
+    cursor: pointer;
+}
+
+.jum {
+    text-align: center;
+    padding: 10px 0;
+    background-color: ghostwhite;
+    margin-top: 10px;
+    border: 1px solid #dfd1ef;
+    border-radius: 10px 10px;
+}
+
+.title {
+    font-size: 18px;
+    padding: 10px 0;
+    text-align: center;
+    color: #00188f;
+}
+
+.dropdown {
+    margin-top: 1em;
+    width: 100%;
+}
