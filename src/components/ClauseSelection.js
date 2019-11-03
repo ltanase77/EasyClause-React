@@ -1,15 +1,31 @@
 import React from 'react'
 class ClausesSelection extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    displayButtons(event) {
+        const value = event.target.value;
+        console.log(value);
+        const buttonsDiv = document.querySelectorAll('.buttons');
+        buttonsDiv.forEach((elem) => {
+            if (elem.getAttribute("data-clause-type") === value) {
+                elem.style.display = "block";
+            } else {
+                elem.style.display = "none";
+            }
+        })
+    }
     render() {
         return (
-            <select className="ui fluid selection dropdown">
-                <i className="dropdown icon"></i>
+            <select className="ui fluid selection dropdown" onChange={this.displayButtons}>
+                {/* <i className="dropdown icon"></i> */}
                 <option>Select Clause</option>
-                <option value="arbitration">Arbitration</option>
-                <option value="jurisdiction">Court Jurisdiction</option>
-                <option value="miscellanous">Miscellanous</option>
+                {this.props.clauses.map((item, index) => {
+                    return <option value={item.typeValue} key={index}>{item.type}</option>
+                })}
             </select>
         );
+
     }
 }
 

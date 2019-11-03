@@ -18,12 +18,26 @@ class Dashboard extends React.Component {
                 btnText: ["Engleza", "Romana"],
             },
         },
+        clausesEN: [],
+        clausesRO: []
     };
-
+    componentDidMount() {
+        this._isMounted = true;
+        fetch('https://easy-clause.firebaseio.com/clauses-type.json')
+            .then(res => res.json())
+            .then(result => {
+                if (this._isMounted) {
+                    this.setState({ clausesEN: result.EN, clausesRO: result.RO })
+                }
+            });
+    }
+    componentWillUnmount() {
+        this._isMounted = false;
+    }
     render() {
         return (
             <div>
-                <PanelContent data={this.state.data} />
+                <PanelContent data={this.state.data} clausesRO={this.state.clausesRO} clausesEN={this.state.clausesEN} />
             </div>
         );
     }

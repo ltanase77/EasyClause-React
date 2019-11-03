@@ -3,7 +3,7 @@ import React from 'react';
 class PanelNavbar extends React.Component {
     render() {
         return (
-            <div className="ui menu centered grid">
+            <div className="ui menu centered grid segment raised">
                 <a className="item">
                     <i className="home icon" />
                     Home

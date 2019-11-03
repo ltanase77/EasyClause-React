@@ -34,7 +34,24 @@
     color: #00188f;
 }
 
-.dropdown {
+.ui.selection.dropdown {
     margin-top: 1em;
     width: 100%;
+    padding: 0;
+}
+
+.ui.buttons {
+    display: none;
+    margin-top: 10px;
+}
+
+option, select {
+    font-family: 'Artifika';
+}
+
+@media only screen and (max-width: 768px) {
+    .ui.button {
+        border: 0.7px solid rgb(21, 20, 29);
+        border-radius: 5px;
+    }
 }

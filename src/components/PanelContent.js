@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import BtnLang from './BtnLang';
 import ClausesSelection from './ClauseSelection';
+import ClausesButtons from './ClausesButtons';
 
 class PanelContent extends React.Component {
     constructor(props) {
@@ -29,10 +30,11 @@ class PanelContent extends React.Component {
                         <BtnLang text={this.props.data.EN.btnText[0]} changeLang={this.handleLanguage} />
                         <BtnLang text={this.props.data.EN.btnText[1]} changeLang={this.handleLanguage} />
                     </div>
-                    <div className="jum">
+                    <div className="jum segment raised">
                         <p className="intro">{this.props.data.EN.description}</p>
                     </div>
-                    <ClausesSelection />
+                    <ClausesSelection clauses={this.props.clausesEN} />
+                    <ClausesButtons clauses={this.props.clausesEN} />
                 </div>
             );
         } else {
@@ -49,7 +51,8 @@ class PanelContent extends React.Component {
                     <div className="jum">
                         <p className="intro">{this.props.data.RO.description}</p>
                     </div>
-                    <ClausesSelection />
+                    <ClausesSelection clauses={this.props.clausesRO} />
+                    <ClausesButtons clauses={this.props.clausesRO} />
                 </div>
             );
         }
